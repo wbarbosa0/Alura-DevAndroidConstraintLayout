@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">WBViagens</string>
+    <string name="app_name">WB::Viagens</string>
+    <string name="especiais">Especiais</string>
 </resources>
