@@ -14,12 +14,19 @@ import br.nom.wbarbosa.wbviagens.ui.adapter.ListaPacotesAdapter;
 
 public class ListaPacotesActivity extends AppCompatActivity {
 
+    public static final String APPBAR_TITLE = "Pacotes";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pacotes);
-        ListView listaPacotes = findViewById(R.id.activity_lista_pacotes_lista);
+        configuraLista();
 
+        setTitle(APPBAR_TITLE);
+    }
+
+    private void configuraLista() {
+        ListView listaPacotes = findViewById(R.id.activity_lista_pacotes_lista);
         List<Pacote> pacotes = new PacoteDAO().lista();
         listaPacotes.setAdapter(new ListaPacotesAdapter(pacotes, this));
     }
